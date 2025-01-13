@@ -98,11 +98,74 @@ export default (props) => {
               have more details as we get closer to the event.
             </p>
             <Tabs>
-              <TabList>
-                <Tab>Monday</Tab>
-                <Tab>Tuesday</Tab>
-                <Tab>Wednesday</Tab>
+              <TabList
+                style={{
+                  display: "flex",
+                  gap: "1rem",
+                  marginBottom: "2rem",
+                  padding: "0",
+                  listStyle: "none",
+                }}
+              >
+                <Tab
+                  style={{
+                    padding: "0.75rem 1.5rem",
+                    border: "2px solid #388CF7",
+                    borderRadius: "8px",
+                    background: "white",
+                    color: "#388CF7",
+                    cursor: "pointer",
+                    fontSize: "1rem",
+                    fontWeight: "500",
+                    transition: "all 0.2s ease",
+                  }}
+                  selectedClassName="selected"
+                >
+                  Monday
+                </Tab>
+                <Tab
+                  style={{
+                    padding: "0.75rem 1.5rem",
+                    border: "2px solid #388CF7",
+                    borderRadius: "8px",
+                    background: "white",
+                    color: "#388CF7",
+                    cursor: "pointer",
+                    fontSize: "1rem",
+                    fontWeight: "500",
+                    transition: "all 0.2s ease",
+                  }}
+                  selectedClassName="selected"
+                >
+                  Tuesday
+                </Tab>
+                <Tab
+                  style={{
+                    padding: "0.75rem 1.5rem",
+                    border: "2px solid #388CF7",
+                    borderRadius: "8px",
+                    background: "white",
+                    color: "#388CF7",
+                    cursor: "pointer",
+                    fontSize: "1rem",
+                    fontWeight: "500",
+                    transition: "all 0.2s ease",
+                  }}
+                  selectedClassName="selected"
+                >
+                  Wednesday
+                </Tab>
               </TabList>
+
+              <style jsx global>{`
+                .react-tabs__tab:hover {
+                  background: #f0f7ff !important;
+                }
+                .react-tabs__tab.selected {
+                  background: #388cf7 !important;
+                  color: white !important;
+                }
+              `}</style>
 
               <TabPanel>
                 <h2>Monday</h2>
