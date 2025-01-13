@@ -127,8 +127,7 @@ export default (props) => {
                     and mobbing.
                   </li>
                   <li>
-                    <strong>5:30-Late</strong> - Dinner, drinks, socializing! We're going to 
-                    and mobbing.
+                    <strong>5:30-Late</strong> - Dinner, drinks, socializing!
                   </li>
                 </ul>
               </TabPanel>
@@ -146,8 +145,7 @@ export default (props) => {
                     and mobbing.
                   </li>
                   <li>
-                    <strong>5:30-Late</strong> - Dinner, drinks, socializing! We're going to 
-                    and mobbing.
+                    <strong>5:30-Late</strong> - Dinner, drinks, socializing!
                   </li>
                 </ul>
               </TabPanel>
@@ -167,8 +165,7 @@ export default (props) => {
                     <strong>4:00 PM</strong> - Demos what we've accomplished (we'll have our stakeholders on a video call so they can see how we've helped them!)
                   </li>
                   <li>
-                    <strong>5:30-Late</strong> - Dinner, drinks, socializing! We're going to 
-                    and mobbing.
+                    <strong>5:30-Late</strong> - Dinner, drinks, socializing!
                   </li>
                 </ul>
               </TabPanel>
