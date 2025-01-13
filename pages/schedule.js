@@ -110,10 +110,10 @@ export default (props) => {
                 <Tab
                   style={{
                     padding: "0.75rem 1.5rem",
-                    border: "2px solid #388CF7",
+                    border: "2px solid #008080",
                     borderRadius: "8px",
                     background: "white",
-                    color: "#388CF7",
+                    color: "#008080",
                     cursor: "pointer",
                     fontSize: "1rem",
                     fontWeight: "500",
@@ -126,10 +126,10 @@ export default (props) => {
                 <Tab
                   style={{
                     padding: "0.75rem 1.5rem",
-                    border: "2px solid #388CF7",
+                    border: "2px solid #008080",
                     borderRadius: "8px",
                     background: "white",
-                    color: "#388CF7",
+                    color: "#008080",
                     cursor: "pointer",
                     fontSize: "1rem",
                     fontWeight: "500",
@@ -142,10 +142,10 @@ export default (props) => {
                 <Tab
                   style={{
                     padding: "0.75rem 1.5rem",
-                    border: "2px solid #388CF7",
+                    border: "2px solid #008080",
                     borderRadius: "8px",
                     background: "white",
-                    color: "#388CF7",
+                    color: "#008080",
                     cursor: "pointer",
                     fontSize: "1rem",
                     fontWeight: "500",
@@ -159,10 +159,10 @@ export default (props) => {
 
               <style jsx global>{`
                 .react-tabs__tab:hover {
-                  background: #f0f7ff !important;
+                  background: #e8f5ef !important;
                 }
                 .react-tabs__tab.selected {
-                  background: #388cf7 !important;
+                  background: #008080 !important;
                   color: white !important;
                 }
               `}</style>
