@@ -77,10 +77,10 @@ export default (props) => {
       </ReactModal>
 
       <Head>
-        <title>Hack For The People - Schedule</title>
+        <title>Ruby in Ghent - Schedule</title>
         <meta
           name="description"
-          content="The schedule for the inter-collegiate online hackathon Hack For The People"
+          content="The schedule for Ruby in Ghent, a free, virtual coding evnet for Rubyists."
         />
       </Head>
 
