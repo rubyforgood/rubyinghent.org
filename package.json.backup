@@ -1,0 +1,25 @@
+{
+  "name": "ghentforgood",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_OPTIONS='--openssl-legacy-provider' next dev",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' next build",
+    "export": "NODE_OPTIONS='--openssl-legacy-provider' next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "9.4.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-id-swiper": "^4.0.0",
+    "react-iframe": "^1.8.0",
+    "react-modal": "^3.11.2",
+    "react-tabs": "^3.1.1",
+    "sass": "^1.26.9",
+    "swiper": "^6.0.4"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^19.1.2"
+  }
+}

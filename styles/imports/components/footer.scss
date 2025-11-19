@@ -1,36 +1,79 @@
+@use "sass:color";
+@use "../variables" as *;
+
 footer {
-  background-color: $color-primary;
-  padding: 50px 0;
+  background: linear-gradient(135deg, $color-dark 0%, color.adjust($color-dark, $lightness: -10%) 100%);
+  padding: 70px 0 30px 0;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  }
 
   & * {
     color: white;
+    position: relative;
+    z-index: 2;
+  }
+  
+  & h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
   }
 
   .footer-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px;
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-gap: 60px;
     align-items: center;
+    margin-bottom: 2rem;
+    
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      opacity: 0.8;
+      filter: brightness(0) invert(1);
+    }
   }
 
   .horizontal-links {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
 
     & li {
-      margin-right: 15px;
+      margin-right: 20px;
 
-      & a:hover {
-        color: white;
+      & a {
+        transition: all 0.3s ease;
+        
+        &:hover {
+          color: $color-accent !important;
+          transform: scale(1.1);
+        }
       }
 
       & img {
-        width: 25px;
+        width: 28px;
+        height: 28px;
+        transition: all 0.3s ease;
+        filter: brightness(0) invert(1);
+        
+        &:hover {
+          filter: brightness(0) invert(1) sepia(1) hue-rotate(140deg) saturate(2);
+          transform: scale(1.1);
+        }
       }
     }
   }
@@ -46,20 +89,53 @@ footer {
       background-color: transparent;
       border: none;
       font-size: 30px;
+      color: $color-accent;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.1);
+        color: white;
+      }
+    }
+  }
+  
+  // Copyright section styling
+  & > div:last-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    
+    small {
+      opacity: 0.7;
+      font-size: 0.9rem;
     }
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  footer {
+    padding: 50px 0 20px 0;
+    
+    & h1 {
+      font-size: 1.6rem;
+    }
+  }
+  
   .footer-grid {
-    grid-template-columns: repeat(auto-fill, 100%) !important;
+    grid-template-columns: 1fr !important;
+    grid-gap: 30px;
+    text-align: center;
 
-    .image {
+    img {
       display: none;
     }
 
     .email-input {
       grid-gap: 0;
     }
+  }
+  
+  .horizontal-links {
+    justify-content: center;
   }
 }

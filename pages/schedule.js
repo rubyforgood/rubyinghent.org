@@ -1,6 +1,7 @@
 import Layout from "../components/Layout.js";
 import Head from "next/head";
 import Header from "../components/Header.js";
+import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import ReactModal from "react-modal";
 import Iframe from "react-iframe";

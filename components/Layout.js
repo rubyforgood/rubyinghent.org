@@ -5,13 +5,11 @@ export default ({ children }) => {
     <>
       <nav className="navbar navbar-expand-md navbar-light">
         <div className="container">
-          <Link href="/">
-            <a className="navbar-brand">
-              <img
-                style={{ width: "200px" }}
-                src="/img/logos/classic-logo.png"
-              />
-            </a>
+          <Link href="/" className="navbar-brand">
+            <img
+              style={{ width: "200px" }}
+              src="/img/logos/classic-logo.png"
+            />
           </Link>
           <button
             className="navbar-toggler"
@@ -23,18 +21,18 @@ export default ({ children }) => {
           <div className="collapse navbar-collapse" id="navbar-target">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link href="/">
-                  <a className="nav-link">Home</a>
+                <Link href="/" className="nav-link">
+                  Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/schedule">
-                  <a className="nav-link">Schedule</a>
+                <Link href="/schedule" className="nav-link">
+                  Schedule
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/faqs">
-                  <a className="nav-link">FAQs</a>
+                <Link href="/faqs" className="nav-link">
+                  FAQs
                 </Link>
               </li>
               <li className="nav-item">
@@ -61,6 +59,14 @@ export default ({ children }) => {
               <ul className="horizontal-links">
                 <li>
                   <a
+                    href="mailto:info@rubyforgood.org"
+                    title="Email us"
+                  >
+                    📧
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://github.com/rubyforgood"
                     target="_blank"
                   >
@@ -79,6 +85,9 @@ export default ({ children }) => {
 
               <ul className="horizontal-links" style={{ paddingTop: "15px" }}>
                 <li>
+                  <a href="mailto:info@rubyforgood.org">info@rubyforgood.org</a>
+                </li>
+                <li>
                   <a href="https://github.com/rubyforgood/code-of-conduct" target="_blank">Code of Conduct</a>
                 </li>
               </ul>
@@ -89,7 +98,7 @@ export default ({ children }) => {
             />
           </div>
           <div>
-            <small>&copy; 2024 Ruby for Good ❤️</small>
+            <small>&copy; 2026 Ruby for Good ❤️</small>
           </div>
         </div>
       </footer>

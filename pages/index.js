@@ -47,43 +47,6 @@ export default () => {
     document.body.style.backgroundColor = "initial";
   }
 
-  const params = {
-    slidesPerView: 5,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    spaceBetween: 50,
-    autoplay: 2000,
-    autoplayDisableOnInteraction: false,
-    loop: true,
-    paginationClickable: true,
-    direction: "horizontal",
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    grabCursor: true,
-    breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-    },
-  };
-
   return (
     <Layout>
       <Head>
@@ -124,7 +87,7 @@ export default () => {
             &times;
           </button>
         </div>
-        <div style={{ padding: "50px" }}>
+        <div style={{ padding: "50px" }} className="modal-content">
           <img
             src="/img/tracks/casa.svg"
             style={{ height: "30vh", paddingBottom: "2vh" }}
@@ -174,7 +137,7 @@ export default () => {
             &times;
           </button>
         </div>
-        <div style={{ padding: "50px" }}>
+        <div style={{ padding: "50px" }} className="modal-content">
           <img
             src="/img/tracks/homewardtails.svg"
             style={{ height: "30vh", paddingBottom: "2vh" }}
@@ -225,7 +188,7 @@ export default () => {
             &times;
           </button>
         </div>
-        <div style={{ padding: "50px" }}>
+        <div style={{ padding: "50px" }} className="modal-content">
           <img
             src="/img/tracks/essentials.svg"
             style={{ height: "30vh", paddingBottom: "2vh" }}
@@ -275,7 +238,7 @@ export default () => {
             &times;
           </button>
         </div>
-        <div style={{ padding: "50px" }}>
+        <div style={{ padding: "50px" }} className="modal-content">
           <img
             src="/img/tracks/environmental.svg"
             style={{ height: "30vh", paddingBottom: "2vh" }}
@@ -301,7 +264,7 @@ export default () => {
             <div>
               <h1>Ruby for Good - Belgium</h1>
               <h2>Ghent, Belgium</h2>
-              <h2>Feb 3-5, 2025</h2>
+              <h2>Feb 2-4, 2026</h2>
               <h4 className="py-3">
                 A code retreat where Ruby programmers (and others!) from all over the 
                 globe get together to build and contribute to projects that help our 

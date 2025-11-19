@@ -23,7 +23,18 @@ export default () => {
         <div className="container">
           <Accordion
             title="What is Ruby for Good?"
-            content="Ruby for Good is an annual event where Ruby programmers globally gather over a long weekend to work on projects help communities. We work on the software year round but gathering in person gives us a chance to work together, learn, and have fun."
+            content={
+              <>
+                <a
+                  href="https://rubyforgood.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ruby for Good
+                </a>{" "}
+                is a nonprofit that builds and maintains software for the social good. One of the ways it does that is through events where Ruby programmers globally gather over a long weekend to work on projects that help communities. We work on the software year round, but gathering in person gives us a chance to work together, learn, and have fun.
+              </>
+            }
           />
 
           <Accordion
@@ -33,7 +44,7 @@ export default () => {
 
           <Accordion
             title="Are you sure this isn't a hackathon?"
-            content="Absolutely, our focus is sustainability and community. The software that we work on at our events we continue to maintain and work on year round. In fact, one of the projects we'll be working on this year was started in 2015 is now helping over 3 million children and over 500k period product recipients each year. This is all real software making a real difference in the world."
+            content="Absolutely, our focus is sustainability and community. The software that we work on at our events will be continued and maintained year round. In fact, one of the projects we'll be working on this year was started in 2015 and is now helping over 3 million children and over 500k period product recipients each year. This is all real software making a real difference in the world."
           />
 
           <Accordion
@@ -48,7 +59,7 @@ export default () => {
 
           <Accordion
             title="How do you choose projects?"
-            content="We've tried to pick a wide range of projects this year and depending on registration numbers we many include a few more."
+            content="We've tried to pick a wide range of projects this year and depending on registration numbers we may include a few more."
           />
 
           <Accordion
@@ -63,7 +74,7 @@ export default () => {
 
           <Accordion
             title="How does food work?"
-            content="We'll be having lunch at the university cafeteria."
+            content="We'll be having either at the venue or nearby."
           />
 
           <Accordion
@@ -83,24 +94,36 @@ export default () => {
 
           <Accordion
             title="When do I need to purchase tickets?"
-            content="Tickets are free but we need require registration to attend!"
+            content="Tickets are free but we require registration to attend!"
           />
 
           <Accordion
             title="Where should I stay?"
-            content="Anywhere in central Ghent there's a tram from downtown that stops right infront of the venue. We'll send out recommendations for hotels soon so as many of us can stay as close as possible."
+            content="Anywhere in central Ghent - there's a tram from downtown that stops right in front of the venue. We'll send out recommendations for hotels soon so as many of us can stay as close as possible."
           />
 
           <Accordion
             title="What more can you tell us about the venue?"
-            content="Take a look at https://cfgmgmtcamp.org/ghent2025/ as they've graciously agreed to share some space with us!"
+            content={
+              <>
+                Take a look at{" "}
+                <a
+                  href="https://cfgmgmtcamp.org/ghent2025/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://cfgmgmtcamp.org/ghent2025/
+                </a>{" "}
+                as they've graciously agreed to share some space with us!
+              </>
+            }
           />
 
           <Accordion
             title="What is a ruby for good event like?"
             content={
               <>
-                Take a look at these blog posts from previous previous attendees
+                Take a look at these blog posts from previous attendees
                 to get a sense of what is in store.
                 <br />
                 <a

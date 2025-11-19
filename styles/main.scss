@@ -1,19 +1,19 @@
-@import "./imports/base";
+@use "./imports/base" as *;
 
 // PAGES
 // INDEX SECTIONS
-@import "./imports/pages/index/header";
-@import "./imports/pages/index/about";
-@import "./imports/pages/index/partnerships";
-@import "./imports/pages/index/sponsors";
-@import "./imports/pages/index/tracks";
-@import "./imports/pages/index/prizes.scss"; // ABOUT SECTIONS
-@import "./imports/pages/about/goals";
-@import "./imports/pages/about/team";
+@use "./imports/pages/index/header" as *;
+@use "./imports/pages/index/about" as *;
+@use "./imports/pages/index/partnerships" as *;
+@use "./imports/pages/index/sponsors" as *;
+@use "./imports/pages/index/tracks" as *;
+@use "./imports/pages/index/prizes.scss" as *; // ABOUT SECTIONS
+@use "./imports/pages/about/goals" as *;
+@use "./imports/pages/about/team" as *;
 
 // SCHEDULE
-@import "./imports/pages/schedule";
+@use "./imports/pages/schedule" as *;
 
 // COMPONENTS
-@import "./imports/components/navbar";
-@import "./imports/components/footer";
+@use "./imports/components/navbar" as *;
+@use "./imports/components/footer" as *;

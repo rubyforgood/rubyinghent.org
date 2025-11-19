@@ -1,34 +1,111 @@
+@use "../imports/variables" as *;
+
 .accordion {
-  border-bottom: 1px solid #ccc;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background: white;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
   cursor: pointer;
-  padding: 10px 15px;
-  transition: all 0.2s;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 
-  & h4 {
-    margin-bottom: 0;
+  &:hover {
+    box-shadow: 
+      0 8px 30px rgba(0, 0, 0, 0.12),
+      0 4px 15px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
 
-    &:after {
-      content: "\02795";
-      font-size: 1.5rem;
-      color: #888;
-      float: right;
+  & > div:first-child {
+    padding: 24px 28px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
     }
   }
 
-  &:last-child {
-    border-bottom: none;
+  & h4 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $color-dark;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:after {
+      content: "+";
+      font-size: 1.8rem;
+      color: $color-primary;
+      font-weight: 300;
+      transition: all 0.3s ease;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 128, 128, 0.1);
+      border-radius: 50%;
+      font-family: monospace;
+    }
+  }
+
+  &.active {
+    & h4:after {
+      content: "−";
+      transform: rotate(180deg);
+      background: rgba(0, 128, 128, 0.2);
+    }
+    
+    & > div:first-child {
+      background: linear-gradient(135deg, $color-primary 0%, $color-accent 100%);
+      
+      & h4 {
+        color: white;
+        
+        &:after {
+          color: white;
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
   }
 }
 
 .panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  margin-left: 25px;
+  transition: max-height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: white;
+
+  & > br {
+    display: none;
+  }
 
   & p {
-    border-left: 2px solid rgb(26, 129, 143);
-    margin-bottom: 0;
-    padding-left: 25px;
+    padding: 0 28px 28px 28px;
+    margin: 0;
+    line-height: 1.7;
+    color: #555;
+    font-size: 1rem;
+    border-left: none;
+    
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      font-weight: 500;
+      
+      &:hover {
+        color: $color-accent;
+        text-decoration: underline;
+      }
+    }
   }
 }
