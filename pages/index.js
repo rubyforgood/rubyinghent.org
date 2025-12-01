@@ -274,7 +274,7 @@ export default () => {
                 <a className="btn w-100 btn-outline-light" href="https://rubyforgood.org" target="_blank" rel="noopener noreferrer">
                   Learn More
                 </a>
-                <a className="btn w-100 btn-light" href="https://ti.to/codeforgood/ghentforgood" target="_blank" rel="noopener noreferrer">
+                <a className="btn w-100 btn-light" href="https://ti.to/codeforgood/rubyinghent" target="_blank" rel="noopener noreferrer">
                   Register
                 </a>
               </div>

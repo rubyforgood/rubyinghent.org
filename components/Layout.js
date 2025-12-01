@@ -38,7 +38,7 @@ export default ({ children }) => {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="https://ti.to/codeforgood/ghentforgood"
+                  href="https://ti.to/codeforgood/rubyinghent"
                   target="_blank"
                 >
                   Register
