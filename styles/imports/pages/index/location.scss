@@ -1,0 +1,88 @@
+@use "../../variables" as *;
+
+.location {
+  background: linear-gradient(135deg, #ffffff 0%, $color-light-bg 100%);
+  padding: 4rem 0;
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: $color-dark;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  .location-address {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #5a6570;
+    max-width: 720px;
+    margin: 0 auto 2rem;
+  }
+
+  .location-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.08),
+      0 5px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 12px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .location-map {
+    width: 100%;
+    height: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+
+  .location-link {
+    text-align: center;
+    margin-top: 1rem;
+
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $color-accent;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .location {
+    padding: 3rem 0;
+
+    & h1 {
+      font-size: 2rem;
+    }
+
+    .location-address {
+      font-size: 1.1rem;
+      margin: 0 20px 1.5rem;
+    }
+
+    .location-card {
+      margin: 0 20px;
+      padding: 10px;
+    }
+
+    .location-map {
+      height: 280px;
+    }
+  }
+}

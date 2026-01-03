@@ -407,6 +407,35 @@ export default () => {
         </div>
       </section>
 
+      <section className="location">
+        <div className="container">
+          <h1>Location</h1>
+          <p className="location-address">
+            The event is hosted at Jam Ghent Hotel, Gaspar de Craeyerstraat 2,
+            Gand, BE 9000.
+          </p>
+          <div className="location-card">
+            <div className="location-map">
+              <iframe
+                title="Jam Ghent Hotel map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=3.7219033%2C51.0408149%2C3.7228586%2C51.0419651&layer=mapnik&marker=51.0412649%2C3.7221081"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+          <p className="location-link">
+            <a
+              href="https://www.openstreetmap.org/?mlat=51.0412649&mlon=3.7221081#map=19/51.0412649/3.7221081"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on OpenStreetMap
+            </a>
+          </p>
+        </div>
+      </section>
+
       <section className="sponsors">
         <div className="container">
           <h1>Sponsors</h1>
