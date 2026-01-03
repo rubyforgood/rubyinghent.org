@@ -84,7 +84,7 @@ export default () => {
 
           <Accordion
             title="Where is the event located?"
-            content="The event takes place at HoGent - Campus SchoonMeersen, Valentin Vaerwyckweg 1, 9000 Gent. It's walking distance from Gent-Sint-Pieters train station and 2 minutes from E40 Highway with limited parking. The event is held in B-block and D-block buildings, with reception in the B-block entrance hall."
+            content="The event takes place at Jam Ghent, a hotel located at Gaspar de Craeyerstraat 2, Gand, BE 9000."
           />
 
           <Accordion
@@ -99,24 +99,12 @@ export default () => {
 
           <Accordion
             title="Where should I stay?"
-            content="Anywhere in central Ghent - there's a tram from downtown that stops right in front of the venue. We'll send out recommendations for hotels soon so as many of us can stay as close as possible."
+            content="Jam Ghent is a hotel in central Ghent, so staying there or nearby is a great option. We'll send out recommendations for nearby hotels soon so as many of us can stay close to the venue."
           />
 
           <Accordion
             title="What more can you tell us about the venue?"
-            content={
-              <>
-                Take a look at{" "}
-                <a
-                  href="https://cfgmgmtcamp.org/ghent2025/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  https://cfgmgmtcamp.org/ghent2025/
-                </a>{" "}
-                as they've graciously agreed to share some space with us!
-              </>
-            }
+            content="Jam Ghent is a hotel venue in central Ghent at Gaspar de Craeyerstraat 2, Gand, BE 9000."
           />
 
           <Accordion

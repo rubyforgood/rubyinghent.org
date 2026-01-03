@@ -265,6 +265,8 @@ export default () => {
               <h1>Ruby for Good - Belgium</h1>
               <h2>Ghent, Belgium</h2>
               <h2>Feb 2-4, 2026</h2>
+              <h3>Venue: Jam Ghent Hotel</h3>
+              <p className="mb-3">Gaspar de Craeyerstraat 2, Gand, BE 9000</p>
               <h4 className="py-3">
                 A code retreat where Ruby programmers (and others!) from all over the 
                 globe get together to build and contribute to projects that help our 
