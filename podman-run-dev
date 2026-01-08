@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+
+podman run --replace -it -v .:/app:z -p 3000:3000 --name run-rig-dev ruby-in-ghent:dev yarn dev
