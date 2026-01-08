@@ -240,7 +240,7 @@ export default () => {
         </div>
         <div style={{ padding: "50px" }} className="modal-content">
           <img
-            src="/img/tracks/environmental.svg"
+            src="/img/tracks/medstick.svg"
             style={{ height: "30vh", paddingBottom: "2vh" }}
           />
           <h1 ref={(_subtitle) => (subtitle = _subtitle)}>Health</h1>
