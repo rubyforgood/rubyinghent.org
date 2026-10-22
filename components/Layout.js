@@ -36,13 +36,9 @@ export default ({ children }) => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="https://ti.to/codeforgood/rubyinghent"
-                  target="_blank"
-                >
-                  Register
-                </a>
+                <span className="nav-link disabled" aria-disabled="true">
+                  Registration coming soon
+                </span>
               </li>
             </ul>
           </div>
@@ -98,7 +94,7 @@ export default ({ children }) => {
             />
           </div>
           <div>
-            <small>&copy; 2026 Ruby for Good ❤️</small>
+            <small>Ruby for Good ❤️</small>
           </div>
         </div>
       </footer>

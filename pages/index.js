@@ -50,10 +50,10 @@ export default () => {
   return (
     <Layout>
       <Head>
-        <title>Ruby for Good</title>
+        <title>Ruby for Good - Belgium 2027</title>
         <meta
           name="description"
-          content="Ruby for Good is a code retreat where Ruby programmers (and others!) from all over the globe get together to build and contribute to projects that help our communities."
+          content="Join Ruby for Good in Ghent, Belgium, February 1-3, 2027. A code retreat building software for our communities. Location and registration details coming soon."
         />
       </Head>
       <ReactModal
@@ -264,9 +264,8 @@ export default () => {
             <div>
               <h1>Ruby for Good - Belgium</h1>
               <h2>Ghent, Belgium</h2>
-              <h2>Feb 2-4, 2026</h2>
-              <h3>Venue: Jam Ghent Hotel</h3>
-              <p className="mb-3">Gaspar de Craeyerstraat 2, Gand, BE 9000</p>
+              <h2>Feb 1-3, 2027</h2>
+              <h3>Location coming soon</h3>
               <h4 className="py-3">
                 A code retreat where Ruby programmers (and others!) from all over the 
                 globe get together to build and contribute to projects that help our 
@@ -276,9 +275,9 @@ export default () => {
                 <a className="btn w-100 btn-outline-light" href="https://rubyforgood.org" target="_blank" rel="noopener noreferrer">
                   Learn More
                 </a>
-                <a className="btn w-100 btn-light" href="https://ti.to/codeforgood/rubyinghent" target="_blank" rel="noopener noreferrer">
-                  Register
-                </a>
+                <button className="btn w-100 btn-light" type="button" disabled>
+                  Registration coming soon
+                </button>
               </div>
             </div>
             <img src="/img/illustrations/header.svg" />
@@ -411,27 +410,7 @@ export default () => {
         <div className="container">
           <h1>Location</h1>
           <p className="location-address">
-            The event is hosted at Jam Ghent Hotel, Gaspar de Craeyerstraat 2,
-            Gand, BE 9000.
-          </p>
-          <div className="location-card">
-            <div className="location-map">
-              <iframe
-                title="Jam Ghent Hotel map"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=3.7219033%2C51.0408149%2C3.7228586%2C51.0419651&layer=mapnik&marker=51.0412649%2C3.7221081"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </div>
-          <p className="location-link">
-            <a
-              href="https://www.openstreetmap.org/?mlat=51.0412649&mlon=3.7221081#map=19/51.0412649/3.7221081"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on OpenStreetMap
-            </a>
+            Location details coming soon.
           </p>
         </div>
       </section>

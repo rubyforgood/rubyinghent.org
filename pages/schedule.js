@@ -78,10 +78,10 @@ export default (props) => {
       </ReactModal>
 
       <Head>
-        <title>Ruby in Ghent - Schedule</title>
+        <title>Ruby in Ghent 2027 - Schedule</title>
         <meta
           name="description"
-          content="The schedule for Ruby in Ghent, a free, virtual coding evnet for Rubyists."
+          content="The schedule for Ruby in Ghent, February 1-3, 2027. Location and registration details coming soon."
         />
       </Head>
 
@@ -95,7 +95,7 @@ export default (props) => {
           <div className="body">
             <h1>Schedule</h1>
             <p>
-              Here's a rough idea of what the schedule will look like. We'll
+              Here's a rough idea of the schedule for February 1-3, 2027. We'll
               have more details as we get closer to the event.
             </p>
             <Tabs>
@@ -169,7 +169,7 @@ export default (props) => {
               `}</style>
 
               <TabPanel>
-                <h2>Monday</h2>
+                <h2>Monday, February 1</h2>
                 <ul>
                   <li>
                     <strong>9:00-10:00am</strong> - Check In
@@ -196,7 +196,7 @@ export default (props) => {
                 </ul>
               </TabPanel>
               <TabPanel>
-                <h2>Tuesday</h2>
+                <h2>Tuesday, February 2</h2>
                 <ul>
                   <li>
                     <strong>9:00am-12:pm</strong> - Coding
@@ -214,7 +214,7 @@ export default (props) => {
                 </ul>
               </TabPanel>
               <TabPanel>
-                <h2>Wednesday</h2>
+                <h2>Wednesday, February 3</h2>
                 <ul>
                   <li>
                     <strong>9:00 AM</strong> - Coding

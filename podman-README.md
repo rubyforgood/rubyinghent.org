@@ -1,10 +1,22 @@
-If you'd like to use Podman for local development:
+## Local Development with Podman
 
-1. Enable permissions for these scripts (they'll make your life easier).
+Run these commands from the repository root:
+
+1. Build the Node.js 24 development image and install the locked npm dependencies:
 ```sh
-chmod +x podman-build
-chmod +x podman-run-dev
+./podman-build
 ```
 
-2. Run `./podman build`
-3. Run `./podman-run-dev`; you should be able to see the app running on `localhost:3000` 👍
+2. Start the development server:
+```sh
+./podman-run-dev
+```
+
+3. Open [http://localhost:3000](http://localhost:3000).
+
+The source directory is mounted for live updates. An anonymous volume keeps
+the image's Linux dependencies separate from any host `node_modules` directory.
+The container and its anonymous volume are removed when it exits.
+
+Rebuild the image after changing `package.json` or `package-lock.json`, then
+restart the container to use the updated dependencies.

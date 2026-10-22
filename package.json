@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
-    "start": "next start"
+    "build": "next build"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   },
   "dependencies": {
     "next": "^16.0.3",

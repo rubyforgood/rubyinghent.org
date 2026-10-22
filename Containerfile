@@ -1,10 +1,13 @@
-FROM node:current-alpine3.22
+FROM node:24-alpine
 
 WORKDIR /app
 
-RUN echo "Copying project files into container…"
+COPY package.json package-lock.json ./
+
+RUN npm ci
 
 COPY . .
 
-CMD ["yarn", "install"]
+EXPOSE 3000
 
+CMD ["npm", "run", "dev", "--", "--hostname", "0.0.0.0"]

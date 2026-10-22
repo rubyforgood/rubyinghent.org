@@ -1,4 +1,9 @@
 #!/bin/sh
 set -e
 
-podman run --replace -it -v .:/app:z -p 3000:3000 --name run-rig-dev ruby-in-ghent:dev yarn dev
+podman run --rm --replace -it \
+  -v .:/app:z \
+  -v /app/node_modules \
+  -p 127.0.0.1:3000:3000 \
+  --name run-rig-dev \
+  ruby-in-ghent:dev

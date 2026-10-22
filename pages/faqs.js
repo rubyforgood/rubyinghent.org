@@ -7,7 +7,7 @@ export default () => {
   return (
     <Layout>
       <Head>
-        <title>Hack For The People - FAQs</title>
+        <title>Ruby for Good - Belgium 2027 - FAQs</title>
         <meta
           name="description"
           content="Here's a few frequently asked questions that we get quite often!"
@@ -69,7 +69,7 @@ export default () => {
 
           <Accordion
             title="When should I arrive?"
-            content="You must arrive by 10am Monday for kickoff, team selection, and environment setup. You can arrive as early as 9am, and we're in the beautiful city of Ghent with amazing things to see."
+            content="The event runs February 1-3, 2027. You must arrive by 10am on Monday, February 1 for kickoff, team selection, and environment setup. You can arrive as early as 9am, and we're in the beautiful city of Ghent with amazing things to see."
           />
 
           <Accordion
@@ -84,7 +84,7 @@ export default () => {
 
           <Accordion
             title="Where is the event located?"
-            content="The event takes place at Jam Ghent, a hotel located at Gaspar de Craeyerstraat 2, Gand, BE 9000."
+            content="The event takes place in Ghent, Belgium. Location details are coming soon."
           />
 
           <Accordion
@@ -94,17 +94,17 @@ export default () => {
 
           <Accordion
             title="When do I need to purchase tickets?"
-            content="Tickets are free but we require registration to attend!"
+            content="Tickets are free but we require registration to attend. Registration is coming soon!"
           />
 
           <Accordion
             title="Where should I stay?"
-            content="Jam Ghent is a hotel in central Ghent, so staying there or nearby is a great option. We'll send out recommendations for nearby hotels soon so as many of us can stay close to the venue."
+            content="We'll share accommodation recommendations once the venue is announced. Location details are coming soon."
           />
 
           <Accordion
             title="What more can you tell us about the venue?"
-            content="Jam Ghent is a hotel venue in central Ghent at Gaspar de Craeyerstraat 2, Gand, BE 9000."
+            content="Venue details are coming soon. Check back for more information about the location."
           />
 
           <Accordion
