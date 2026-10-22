@@ -1,0 +1,112 @@
+---
+import "../../styles/main.scss";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Ruby for Good brings people together to build software for social good.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="site">
+      <nav class="navbar navbar-expand-md navbar-light" aria-label="Main navigation">
+        <div class="container">
+          <a href="/" class="navbar-brand">
+            <img style="width: 200px" src="/img/logos/classic-logo.png" alt="Ruby for Good home" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-controls="navbar-target"
+            aria-expanded="false"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-target">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="/schedule" class="nav-link">Schedule</a></li>
+              <li class="nav-item"><a href="/faqs" class="nav-link">FAQs</a></li>
+              <li class="nav-item">
+                <span class="nav-link disabled" aria-disabled="true">Registration coming soon</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main><slot /></main>
+
+      <footer>
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <h1>Get in touch!</h1>
+              <ul class="horizontal-links">
+                <li><a href="mailto:info@rubyforgood.org" title="Email us">📧</a></li>
+                <li>
+                  <a href="https://github.com/rubyforgood" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/icons/github.svg" alt="GitHub" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/company/ruby-for-good/" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/icons/linkedin2.svg" alt="LinkedIn" />
+                  </a>
+                </li>
+              </ul>
+              <ul class="horizontal-links" style="padding-top: 15px">
+                <li><a href="mailto:info@rubyforgood.org">info@rubyforgood.org</a></li>
+                <li>
+                  <a href="https://github.com/rubyforgood/code-of-conduct" target="_blank" rel="noopener noreferrer">
+                    Code of Conduct
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <img class="mobile-disappear" src="/img/illustrations/footer.svg" alt="" />
+          </div>
+          <div><small>Ruby for Good ❤️</small></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>(".navbar-toggler");
+  const menu = document.getElementById("navbar-target");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") !== "true";
+      toggle.setAttribute("aria-expanded", String(expanded));
+      menu.classList.toggle("show", expanded);
+    });
+  }
+</script>

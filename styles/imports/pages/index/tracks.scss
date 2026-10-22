@@ -135,6 +135,21 @@
     padding: 50px;
     height: 100%;
     overflow-y: auto;
+
+    .modal-close {
+      align-self: flex-end;
+      border: none;
+      background: none;
+      color: grey;
+      font-size: 30px;
+      font-weight: 200;
+    }
+
+    .modal-image {
+      height: 30vh;
+      max-width: 100%;
+      padding-bottom: 2vh;
+    }
     
     img {
       filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));

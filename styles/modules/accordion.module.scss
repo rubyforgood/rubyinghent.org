@@ -21,10 +21,16 @@
     transform: translateY(-2px);
   }
 
-  & > div:first-child {
+  & > summary {
+    display: block;
+    list-style: none;
     padding: 24px 28px;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     transition: all 0.3s ease;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
     
     &:hover {
       background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
@@ -57,14 +63,14 @@
     }
   }
 
-  &.active {
+  &[open] {
     & h4:after {
       content: "−";
       transform: rotate(180deg);
       background: rgba(0, 128, 128, 0.2);
     }
     
-    & > div:first-child {
+    & > summary {
       background: linear-gradient(135deg, $color-primary 0%, $color-accent 100%);
       
       & h4 {
@@ -80,9 +86,7 @@
 }
 
 .panel {
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   background: white;
 
   & > br {
@@ -90,7 +94,7 @@
   }
 
   & p {
-    padding: 0 28px 28px 28px;
+    padding: 24px 28px 28px;
     margin: 0;
     line-height: 1.7;
     color: #555;

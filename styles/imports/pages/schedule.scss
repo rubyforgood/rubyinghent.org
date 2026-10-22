@@ -31,7 +31,42 @@ table th {
   background-color: $color-primary;
 }
 
-.react-tabs__tab--selected {
-  background-color: rgb(22, 94, 103) !important;
-  color: white;
+.schedule {
+  .react-tabs__tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .react-tabs__tab {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #008080;
+    border-radius: 8px;
+    background: white;
+    color: #008080;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #e8f5ef;
+    }
+  }
+
+  .react-tabs__tab--selected {
+    background: #008080;
+    color: white;
+  }
+
+  .react-tabs__tab-panel {
+    display: none;
+  }
+
+  .react-tabs__tab-panel--selected {
+    display: block;
+  }
 }

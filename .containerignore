@@ -1,5 +1,7 @@
 .git
 node_modules
+.astro
+dist
 .next
 out
 build

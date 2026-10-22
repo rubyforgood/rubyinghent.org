@@ -1,0 +1,17 @@
+---
+import styles from "../../styles/modules/accordion.module.scss";
+
+interface Props {
+  title: string;
+  content?: string;
+}
+
+const { title, content } = Astro.props;
+---
+
+<details class={styles.accordion}>
+  <summary><h4>{title}</h4></summary>
+  <div class={styles.panel}>
+    <p>{content}<slot /></p>
+  </div>
+</details>

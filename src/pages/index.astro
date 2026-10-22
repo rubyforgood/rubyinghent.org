@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ProjectTracks from "../components/ProjectTracks.jsx";
+---
+
+<Layout
+  title="Ruby for Good - Belgium 2027"
+  description="Join Ruby for Good in Ghent, Belgium, February 1-3, 2027. Build software for good, make friends, and have fun. Location and registration details coming soon."
+>
+  <header>
+    <div class="container">
+      <div class="header-grid">
+        <div>
+          <h1>Ruby for Good - Belgium</h1>
+          <h2>Ghent, Belgium</h2>
+          <h2>Feb 1-3, 2027</h2>
+          <h3>Location coming soon</h3>
+          <h4 class="py-3">
+            A three-day code retreat to build software for good, make
+            friends, and have fun.
+            Join Ruby programmers (and others!) from around the world to
+            learn from each other, build community, and enjoy time
+            together in Ghent.
+          </h4>
+          <div class="cta-buttons">
+            <a class="btn w-100 btn-outline-light" href="https://rubyforgood.org" target="_blank" rel="noopener noreferrer">
+              Learn More
+            </a>
+            <button class="btn w-100 btn-light" type="button" disabled>
+              Registration coming soon
+            </button>
+          </div>
+        </div>
+        <img src="/img/illustrations/header.svg" alt="" />
+      </div>
+    </div>
+  </header>
+
+  <Header
+    headerText="About Ruby for Good"
+    description="Ruby for Good builds software that supports nonprofit missions, brings people together in an inclusive technology community, and creates learning opportunities for underserved communities. Our retreat is as much about people as it is about code. We work at a sustainable pace, share what we know, and leave plenty of room for conversations, laughter, and friendships that last beyond the event."
+  />
+
+  <section id="tracks-section" class="tracks">
+    <div class="container">
+      <h1>Focus Areas This Year</h1>
+      <ProjectTracks client:load />
+    </div>
+  </section>
+
+  <section class="partnerships">
+    <div class="container">
+      <h1>Social Sector Partners</h1>
+      <div class="partners-grid">
+        <div class="partner p-5">
+          <a href="https://techieswithoutborders.us" target="_blank" rel="noopener noreferrer">
+            <img src="/img/logos/partners/twb.jpeg" alt="Techies Without Borders" />
+          </a>
+        </div>
+        <div class="partner">
+          <a href="https://homewardtails.org/" target="_blank" rel="noopener noreferrer">
+            <img src="/img/logos/partners/hwts.png" alt="Homeward Tails" />
+          </a>
+        </div>
+        <div class="partner p-5">
+          <a href="https://nationaldiaperbanknetwork.org" target="_blank" rel="noopener noreferrer">
+            <img src="/img/logos/partners/ndbn.jpg" alt="National Diaper Bank Network" />
+          </a>
+        </div>
+        <div class="partner">
+          <a href="https://pgcasa.org" target="_blank" rel="noopener noreferrer">
+            <img src="/img/logos/partners/casa.png" alt="CASA" />
+          </a>
+        </div>
+        <div class="partner">
+          <a href="https://allianceforperiodsupplies.org" target="_blank" rel="noopener noreferrer">
+            <img src="/img/logos/partners/aps.jpg" alt="Alliance for Period Supplies" />
+          </a>
+        </div>
+        <div class="partner p-2">
+          <a href="https://flaredown.com/" target="_blank" rel="noopener noreferrer">
+            <img src="/img/logos/partners/flaredown.png" alt="Flaredown" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="location">
+    <div class="container">
+      <h1>Location</h1>
+      <p class="location-address">Location details coming soon.</p>
+    </div>
+  </section>
+
+  <section class="sponsors">
+    <div class="container">
+      <h1>Sponsors</h1>
+      <div class="sponsors-grid"></div>
+      <p>
+        Interested in sponsoring us?
+        <a href="mailto:info@rubyforgood.org" target="_blank" rel="noopener noreferrer">Get In Touch!</a>!
+      </p>
+    </div>
+  </section>
+</Layout>

@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The Ruby for Good Belgium website uses [Astro](https://astro.build/) to generate
+static HTML. React is loaded only for the project modals on the homepage and the
+schedule tabs. FAQs use native HTML accordions.
 
 ## 2027 Event
 
@@ -7,7 +9,8 @@ Location and registration details are coming soon.
 
 ## Getting Started
 
-Use Node.js 24 (as used in CI and Podman); Next.js requires Node.js 20.9 or newer.
+Use Node.js 24 (as used in CI and Podman). Astro requires Node.js 22.23.4 or newer
+and npm 9.6.5 or newer.
 This project uses npm and commits `package-lock.json` for reproducible installs.
 
 Install dependencies and run the development server:
@@ -19,7 +22,9 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Edit pages in `src/pages/`, the shared layout in `src/layouts/`, and reusable
+components in `src/components/`. Existing Sass styles remain in `styles/`, and
+images and other static assets live in `public/`. The browser updates as you edit.
 
 ### If you want to use Podman for local development
 See the [Podman instructions](podman-README.md).
@@ -30,16 +35,23 @@ See the [Podman instructions](podman-README.md).
 npm run build
 ```
 
-The build exports the static site to `out/` because `next.config.js` sets
-`output: "export"`. No separate export command or Next.js production server is
-needed. Deploy `out/` to a static web host; the GitHub Pages workflow does this
-automatically on pushes to `main`.
+The build generates the static site in `dist/`. No application server is needed
+in production. Preview the built site locally with:
 
-## Learn More
+```bash
+npm run preview
+```
 
-To learn more about Next.js, take a look at the following resources:
+Deploy `dist/` to a static web host. The GitHub Pages workflow checks the Astro
+components, builds and tests the output, and deploys on pushes to `main`.
+`public/CNAME` preserves the `rubyinghent.org` custom domain.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Validation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npm run check
+npm test
+```
+
+The tests build the site and verify routes, metadata, event details, static FAQ
+content, React island placement, and public assets.

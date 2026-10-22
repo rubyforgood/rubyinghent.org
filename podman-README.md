@@ -7,7 +7,7 @@ Run these commands from the repository root:
 ./podman-build
 ```
 
-2. Start the development server:
+2. Start the Astro development server:
 ```sh
 ./podman-run-dev
 ```
