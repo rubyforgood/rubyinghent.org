@@ -55,3 +55,10 @@ npm test
 
 The tests build the site and verify routes, metadata, event details, static FAQ
 content, React island placement, and public assets.
+
+## Artwork
+
+The homepage hero uses [Pair programming](https://undraw.co/illustration/pair-programming_9jyg)
+and the footer uses [Coffee with friends](https://undraw.co/illustration/coffee-with-friends_ocg2).
+Both illustrations are by Katerina Limpitsouni / unDraw, recolored to match the
+site, and used under the [unDraw license](https://undraw.co/license).

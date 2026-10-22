@@ -24,6 +24,8 @@ for (const [file, title] of routes) {
     assert.match(html, /href="\/faqs"/);
     assert.ok(html.includes("Registration coming soon"));
     assert.ok(html.includes("<small>Ruby for Good ❤️</small>"));
+    assert.match(html, /src="\/img\/illustrations\/coffee-with-friends\.svg"/);
+    assert.doesNotMatch(html, /src="\/img\/illustrations\/footer\.svg"/);
     assert.doesNotMatch(html, /__NEXT_DATA__|\/_next\/|jquery|popper\.js/);
   });
 }
@@ -34,6 +36,8 @@ test("homepage preserves event details and hydrates only project controls", asyn
   assert.ok(html.includes("A three-day code retreat"));
   assert.ok(html.includes("Location coming soon"));
   assert.ok(html.includes("Location details coming soon."));
+  assert.match(html, /src="\/img\/illustrations\/pair-programming\.svg"/);
+  assert.doesNotMatch(html, /src="\/img\/illustrations\/header\.svg"/);
   assert.match(html, /<button\b[^>]*disabled[^>]*>\s*Registration coming soon\s*<\/button>/);
   for (const title of ["Foster Care", "Animal Rescues", "Poverty", "Health"]) {
     assert.ok(html.includes(`<h3>${title}</h3>`));
@@ -70,6 +74,8 @@ test("custom domain and existing public assets are included in the build", async
   for (const file of [
     "favicon.ico",
     "img/logos/classic-logo.png",
+    "img/illustrations/pair-programming.svg",
+    "img/illustrations/coffee-with-friends.svg",
     "img/tracks/casa.svg",
     "img/tracks/homewardtails.svg",
     "img/tracks/essentials.svg",
