@@ -35,12 +35,11 @@ test("homepage preserves event details and hydrates only project controls", asyn
   const html = await readPage("index.html");
   assert.ok(html.includes("Feb 1-3, 2027"));
   assert.ok(html.includes("A three-day code retreat"));
-  assert.ok(html.includes("<h3>JAM Ghent</h3>"));
-  assert.ok(html.includes("Gaspar de Craeyerstraat 2, 9000 Ghent, Belgium"));
+  assert.match(html, /<h3>JAM Ghent<\/h3>\s*<p\b[^>]*>Gaspar de Craeyerstraat 2, 9000 Ghent, Belgium<\/p>/);
   assert.match(html, /<a href="https:\/\/www\.google\.com\/maps\/[^"]*">Get directions to JAM Ghent<\/a>/);
   assert.match(html, /src="\/img\/illustrations\/pair-programming\.svg"/);
   assert.doesNotMatch(html, /src="\/img\/illustrations\/header\.svg"/);
-  assert.match(html, /<a class="btn w-100 btn-light" href="https:\/\/ti\.to\/codeforgood\/rubyinghent">\s*Register for Free\s*<\/a>/);
+  assert.match(html, /<a class="btn w-100 btn-light" href="https:\/\/ti\.to\/codeforgood\/rubyinghent">\s*Register\s*<\/a>/);
   for (const title of ["Foster Care", "Animal Rescues", "Poverty", "Health"]) {
     assert.ok(html.includes(`<h3>${title}</h3>`));
   }
