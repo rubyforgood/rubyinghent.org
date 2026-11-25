@@ -2,11 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import ProjectTracks from "../components/ProjectTracks.jsx";
+import { registrationUrl, venue } from "../event";
 ---
 
 <Layout
   title="Ruby for Good - Belgium 2027"
-  description="Join Ruby for Good in Ghent, Belgium, February 1-3, 2027. Build software for good, make friends, and have fun. Location and registration details coming soon."
+  description="Join Ruby for Good at JAM Ghent, February 1-3, 2027. Build software for good, make friends, and have fun. Registration is free."
 >
   <header>
     <div class="container">
@@ -15,7 +16,7 @@ import ProjectTracks from "../components/ProjectTracks.jsx";
           <h1>Ruby for Good - Belgium</h1>
           <h2>Ghent, Belgium</h2>
           <h2>Feb 1-3, 2027</h2>
-          <h3>Location coming soon</h3>
+          <h3>{venue.name}</h3>
           <h4 class="py-3">
             A three-day code retreat to build software for good, make
             friends, and have fun.
@@ -27,9 +28,9 @@ import ProjectTracks from "../components/ProjectTracks.jsx";
             <a class="btn w-100 btn-outline-light" href="https://rubyforgood.org" target="_blank" rel="noopener noreferrer">
               Learn More
             </a>
-            <button class="btn w-100 btn-light" type="button" disabled>
-              Registration coming soon
-            </button>
+            <a class="btn w-100 btn-light" href={registrationUrl}>
+              Register for Free
+            </a>
           </div>
         </div>
         <img
@@ -97,7 +98,13 @@ import ProjectTracks from "../components/ProjectTracks.jsx";
   <section class="location">
     <div class="container">
       <h1>Location</h1>
-      <p class="location-address">Location details coming soon.</p>
+      <p class="location-address">
+        <strong>{venue.name}</strong><br />
+        {venue.address}
+      </p>
+      <p class="location-link">
+        <a href={venue.directionsUrl}>Get directions to {venue.name}</a>
+      </p>
     </div>
   </section>
 

@@ -1,5 +1,6 @@
 ---
 import "../../styles/main.scss";
+import { registrationUrl } from "../event";
 
 interface Props {
   title: string;
@@ -53,7 +54,7 @@ const {
               <li class="nav-item"><a href="/schedule" class="nav-link">Schedule</a></li>
               <li class="nav-item"><a href="/faqs" class="nav-link">FAQs</a></li>
               <li class="nav-item">
-                <span class="nav-link disabled" aria-disabled="true">Registration coming soon</span>
+                <a href={registrationUrl} class="nav-link">Register</a>
               </li>
             </ul>
           </div>

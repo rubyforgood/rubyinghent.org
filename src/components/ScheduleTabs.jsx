@@ -29,9 +29,9 @@ const days = [
     activities: [
       ["9:00 AM", "Coding"],
       ["12:00 PM", "Lunch"],
-      ["1:00 PM", "Coding"],
-      ["4:00 PM", "Demos what we've accomplished (we'll have our stakeholders on a video call so they can see how we've helped them!)"],
-      ["5:30-Late", "Dinner, drinks, socializing!"],
+      ["1:00 PM", "Final coding session and project demos with our nonprofit partners"],
+      ["3:00 PM", "Retreat wraps up"],
+      ["After the retreat", "Sticking around? Join us for optional dinner, sightseeing, or more time together in Ghent."],
     ],
   },
 ];

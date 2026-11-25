@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Accordion from "../components/Accordion.astro";
+import { registrationUrl, venue } from "../event";
 ---
 
 <Layout
@@ -59,10 +60,10 @@ import Accordion from "../components/Accordion.astro";
         title="Can I or my company sponsor the event?"
         content="Yes! We are looking for sponsors to help cover the costs of the event. Please reach out to us at info@rubyforgood.org for more information. We would love to be able to provide food, swag and other goodies for the attendees."
       />
-      <Accordion
-        title="Where is the event located?"
-        content="The event takes place in Ghent, Belgium. Location details are coming soon."
-      />
+      <Accordion title="Where is the event located?">
+        We'll meet at {venue.name}, {venue.address}.
+        <a href={venue.directionsUrl}>Get directions to {venue.name}</a>.
+      </Accordion>
       <Accordion
         title="Are the people friendly?"
         content="Yes! There's a reason people keep coming back and call themselves 'gooders.' We're a friendly, welcoming, and inclusive community, and you don't need to know anyone before you arrive. Whether it's your first event or you're a returning gooder, there's room for you to learn, contribute, and make new friends."
@@ -71,18 +72,18 @@ import Accordion from "../components/Accordion.astro";
         title="Will there be time to socialize?"
         content="Absolutely. Building community is a big part of why we get together. There will be time to chat, get to know your teammates, and relax away from the keyboard. We're planning evening activities like board games and karaoke, with more details to come. Join in with what sounds fun and take downtime when you need it."
       />
+      <Accordion title="How do I register?">
+        Registration is free and required to attend.
+        <a href={registrationUrl}>Register on Tito</a>.
+      </Accordion>
       <Accordion
-        title="When do I need to purchase tickets?"
-        content="Tickets are free but we require registration to attend. Registration is coming soon!"
+        title="Can I make a donation?"
+        content="Yes. You can make an optional donation when you register to help cover food, snacks, swag, and other event costs. The separate Event Donation option does not register you for the retreat."
       />
-      <Accordion
-        title="Where should I stay?"
-        content="We'll share accommodation recommendations once the venue is announced. Location details are coming soon."
-      />
-      <Accordion
-        title="What more can you tell us about the venue?"
-        content="Venue details are coming soon. Check back for more information about the location."
-      />
+      <Accordion title="Where should I stay?">
+        The venue is also a hotel. Check the
+        <a href={venue.websiteUrl}>{venue.name} website</a> for rooms and rates.
+      </Accordion>
       <Accordion title="What is a ruby for good event like?">
         Take a look at these blog posts from previous attendees
         to get a sense of what is in store.

@@ -22,7 +22,8 @@ for (const [file, title] of routes) {
     assert.match(html, /<meta\b[^>]*name="viewport"/);
     assert.match(html, /href="\/schedule"/);
     assert.match(html, /href="\/faqs"/);
-    assert.ok(html.includes("Registration coming soon"));
+    assert.match(html, /<a href="https:\/\/ti\.to\/codeforgood\/rubyinghent" class="nav-link">Register<\/a>/);
+    assert.doesNotMatch(html, /(?:location|venue|registration)[^.<>]*coming soon/i);
     assert.ok(html.includes("<small>Ruby for Good ❤️</small>"));
     assert.match(html, /src="\/img\/illustrations\/coffee-with-friends\.svg"/);
     assert.doesNotMatch(html, /src="\/img\/illustrations\/footer\.svg"/);
@@ -34,17 +35,17 @@ test("homepage preserves event details and hydrates only project controls", asyn
   const html = await readPage("index.html");
   assert.ok(html.includes("Feb 1-3, 2027"));
   assert.ok(html.includes("A three-day code retreat"));
-  assert.ok(html.includes("Location coming soon"));
-  assert.ok(html.includes("Location details coming soon."));
+  assert.ok(html.includes("<h3>JAM Ghent</h3>"));
+  assert.ok(html.includes("Gaspar de Craeyerstraat 2, 9000 Ghent, Belgium"));
+  assert.match(html, /<a href="https:\/\/www\.google\.com\/maps\/[^"]*">Get directions to JAM Ghent<\/a>/);
   assert.match(html, /src="\/img\/illustrations\/pair-programming\.svg"/);
   assert.doesNotMatch(html, /src="\/img\/illustrations\/header\.svg"/);
-  assert.match(html, /<button\b[^>]*disabled[^>]*>\s*Registration coming soon\s*<\/button>/);
+  assert.match(html, /<a class="btn w-100 btn-light" href="https:\/\/ti\.to\/codeforgood\/rubyinghent">\s*Register for Free\s*<\/a>/);
   for (const title of ["Foster Care", "Animal Rescues", "Poverty", "Health"]) {
     assert.ok(html.includes(`<h3>${title}</h3>`));
   }
   assert.equal((html.match(/<astro-island\b/g) ?? []).length, 1);
   assert.match(html, /component-url="[^"]*ProjectTracks[^"]*"/);
-  assert.doesNotMatch(html, /Jam Ghent|Gaspar de Craeyerstraat|ti\.to\/codeforgood|openstreetmap/);
 });
 
 test("FAQ answers are static, accessible without React, and preserve the copy", async () => {
@@ -53,7 +54,10 @@ test("FAQ answers are static, accessible without React, and preserve the copy", 
   assert.equal((html.match(/<summary\b/g) ?? []).length, 17);
   assert.ok(html.includes("Ruby for Good is a code retreat:"));
   assert.ok(html.includes("Building community is a big part of why we get together."));
-  assert.ok(html.includes("Registration is coming soon!"));
+  assert.ok(html.includes("Registration is free and required to attend."));
+  assert.match(html, /<a href="https:\/\/ti\.to\/codeforgood\/rubyinghent">Register on Tito<\/a>/);
+  assert.ok(html.includes("The separate Event Donation option does not register you"));
+  assert.ok(html.includes("Gaspar de Craeyerstraat 2, 9000 Ghent, Belgium"));
   assert.ok(html.includes('href="https://rubyforgood.org"'));
   assert.ok(html.includes("chelseatroy.com/2019/04/02/"));
   assert.doesNotMatch(html, /<astro-island\b|hackathon/i);
@@ -67,6 +71,14 @@ test("all schedule days are prerendered in a single interactive island", async (
   assert.ok(html.includes("Evening activities are optional"));
   assert.equal((html.match(/<astro-island\b/g) ?? []).length, 1);
   assert.match(html, /component-url="[^"]*ScheduleTabs[^"]*"/);
+});
+
+test("Wednesday wraps up at 3 PM, with optional plans afterward", async () => {
+  const html = await readPage("schedule.html");
+  const [, agenda] = html.match(/<h2>Wednesday,\s*February 3<\/h2><ul>(.*?)<\/ul>/s) ?? [];
+  assert.ok(agenda, "Wednesday agenda is rendered");
+  assert.match(agenda.replaceAll("<!-- -->", ""), /<strong>3:00 PM<\/strong> - Retreat wraps up.*<strong>After the retreat<\/strong> - .*optional dinner, sightseeing/s);
+  assert.doesNotMatch(agenda, /<strong>4:00 PM<\/strong>/);
 });
 
 test("custom domain and existing public assets are included in the build", async () => {
